@@ -1,0 +1,11 @@
+- Deve ser gerado uma tela com a listagem de tasks e formulários para criar uma nova task ou editar uma já existente.
+- As tasks devem ter um checkbox que ao selecionar altera o status da task para done.
+- Ao desmarcar checkbox da task o status deve ser alterado para todo.
+- Na listagem, cada task deve ter um botão que permita excluir a mesma.
+- Ao clicar em excluir deve ser exibido uma mensagem de confirmação perguntando se o usuário deseja realmente excluir a task. Caso o usuário confirme, deve ser excluído.
+- Ao clicar em uma task, o texto deve ser substituído por um formulário que permita a edição da mesma.
+- As task devem ser ordenadas das mais antigas para as mais recentes.
+- Deve ser exibido o progresso da lista (O numero total de tasks e a quantidade que já foi concluída).
+- A tela deve ser feita Javascript e CSS vanilla (Sem a utilização de nenhum framework, Jquery, Vue, bootstrap ou Tailwind)
+- Os dados devem ser salvos no Local Storage, isto é, quando atualizar a página os dados devem continuar presentes na tela
+- Deve ser criado um repositório git público
