@@ -12,13 +12,14 @@ function addNewTask() {
         span.setAttribute("id", "convt");
         li.appendChild(span);
         btn1.className = "editTask";
-        btn1.appendChild(document.createTextNode("✏️"));
+        btn1.appendChild(document.createTextNode("✎"));
         li.appendChild(btn1);
         btn2.className = "delTask";
-        btn2.appendChild(document.createTextNode("🗑️"));
+        btn2.appendChild(document.createTextNode("🗙"));
         li.appendChild(btn2);
         document.getElementById("tasks").appendChild(li);
         document.getElementById("newTask").value = "";
+        document.getElementById("newTask").focus();
     }
 }
 
@@ -49,7 +50,7 @@ addEventListener("click", (ev) => {
         let span = document.getElementById("convt");
         let txt = ev.target.parentNode.childNodes[0].innerText;
         span.innerHTML = '<input id="txtTask" onblur="spanReset(this)" type="text" value="' + txt + '"/>';
-        document.getElementById("txtTask").focus();
+        document.getElementById("txtTask").focus();        
     }
 });
 

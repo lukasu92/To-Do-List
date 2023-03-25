@@ -7,8 +7,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    font-size: 100%;
+    font-family: 'Noto Sans', sans-serif;    
     list-style-type: none;
     width: 100vw;
     height: 100vh;
@@ -19,39 +18,103 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; 
+} 
+
+button{    
+    border:none;    
+    outline: none;
+    font-size: 1rem;
+    background: none; 
+    color:#00ff88;
+    cursor: pointer;
+}
+
+input{   
+    font-size: 1rem;    
+    border: none;
+    background: #373147;
+    color: #f0ffffde;    
+    outline: none;
+}
+
+input::placeholder{
+    color: #f0ffffde;
+}
+
+.main{
+    width: 60%;
+}
+
+.main h4, .main h6 {
+    border-bottom: 1px solid #00ff88;
+    margin-bottom: 0.6rem;
+}
+
+.header {
+    width: 100%;
+    height: 100%;    
+    display: grid;
+    background: #373147;
+    grid-template-columns:6fr 1fr;
+    border-radius: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.header input{       
+    border-radius: 0.6rem 0 0 0.6rem;
+    padding: 0.6rem;    
+}
+
+.header button{
+    border-radius: 0 0.6rem 0.6rem 0;
+    font-size: 2rem;   
+}
+
+.header button:hover{
+    color: #201b2c;    
+}
+
+#tasks li {    
+    position: relative;
+    background: #373147;
+    display: grid;     
+    grid-template-columns: 6fr 1fr 1fr;    
+    border-radius: 0.6rem;
+    padding: 0.6rem;
+    margin: 0.62rem 0;  
+}
+
+.delTask:hover{    
+    border-radius: 0 0.6rem 0.6rem 0;       
+}
+
+#tasks li button:hover{
+    color: #201b2c;;          
+}
+
+#tasks li.checked{
+    background: #2b2738;    
+}
+
+#tasks li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #00ff88;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 8px;
+    left: 15px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
     
 }
 
-input{
-    width: 80%;
-    font-size: 1rem;
-    padding: 0.62rem;
-    border-radius: 0.62rem;
-    border: none;
-    background: #514869;
-    color: #f0ffffde;
-    box-shadow: 0 0.62rem 2.5rem #00000056;
-    outline: none;
-    display: inline;
-}    
+#convt{
+    margin-left: 2rem;
+}
 
-
-ul li span.checked{
+#convt.checked{
     text-decoration: line-through;
 }
-
-ul li.checked::before {
-    content: '✔️';      
-}
-
-.header{
-    display: inline;
-}
-.main{
-    width: 50%;
-    height: 50%;    
-
-}
-
-
 
