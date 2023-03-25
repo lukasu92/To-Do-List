@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style-type: none;
 }
 
 body {
@@ -13,6 +14,43 @@ body {
     height: 100vh;
     min-width: 100vw;
     min-height: 100vh;
+    background: #201b2c;
+    color: #00ff88;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+}
+
+input{
+    width: 80%;
+    font-size: 1rem;
+    padding: 0.62rem;
+    border-radius: 0.62rem;
+    border: none;
+    background: #514869;
+    color: #f0ffffde;
+    box-shadow: 0 0.62rem 2.5rem #00000056;
+    outline: none;
+    display: inline;
+}    
+
+
+ul li span.checked{
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    content: '✔️';      
+}
+
+.header{
+    display: inline;
+}
+.main{
+    width: 50%;
+    height: 50%;    
+
 }
 
 
