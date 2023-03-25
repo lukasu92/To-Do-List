@@ -6,7 +6,8 @@ function addNewTask() {
     let btn1 = document.createElement("button");
     let btn2 = document.createElement("button");
     if (newTask === "") {
-        alert("Favor preencher algo.");
+        document.getElementById("msg1").style.display = "block";
+        const timeOut = setTimeout(hideMsg, 3000);       
     } else {
         span.appendChild(txt);
         span.setAttribute("id", "convt");
@@ -45,12 +46,19 @@ addEventListener("click", (ev) => {
 });
 
 //EDIT
+//posicinar cursor no final da palavra
 addEventListener("click", (ev) => {
     if (ev.target.className === "editTask") {
         let span = document.getElementById("convt");
-        let txt = ev.target.parentNode.childNodes[0].innerText;
-        span.innerHTML = '<input id="txtTask" onblur="spanReset(this)" type="text" value="' + txt + '"/>';
-        document.getElementById("txtTask").focus();        
+        if (span.className != "checked") {
+            let txt = ev.target.parentNode.childNodes[0].innerText;
+            span.innerHTML = '<input id="txtTask" onfocus="this.selectionStart = this.selectionEnd = 500;" onblur="spanReset(this)" type="text" value="' + txt + '"/>';
+            document.getElementById("txtTask").focus();    
+        }else{
+            document.getElementById("msg2").style.display = "block";
+            const timeOut = setTimeout(hideMsg, 3000);
+
+        }      
     }
 });
 
@@ -59,8 +67,19 @@ function spanReset(e) {
     let txt = document.getElementById("txtTask").value;
     if (txt === "") {
         document.getElementById("txtTask").focus();
-        alert("O campo não pode ficar em branco");
+        document.getElementById("msg1").style.display = "block";
+        const timeOut = setTimeout(hideMsg, 3000);       
     } else {
         span.innerHTML = txt;
+    }
+}
+
+function hideMsg() {
+    
+    if (document.getElementById("msg1")) {
+        document.getElementById("msg1").style.display = "none";
+    }
+    if (document.getElementById("msg2")) {
+        document.getElementById("msg2").style.display = "none";
     }
 }

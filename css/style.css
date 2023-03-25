@@ -17,13 +17,14 @@ body {
     color: #00ff88;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+    font-size: 1rem;
 } 
 
 button{    
     border:none;    
     outline: none;
-    font-size: 1rem;
+    font-size: 2rem;
     background: none; 
     color:#00ff88;
     cursor: pointer;
@@ -32,7 +33,7 @@ button{
 input{   
     font-size: 1rem;    
     border: none;
-    background: #373147;
+    background: none;
     color: #f0ffffde;    
     outline: none;
 }
@@ -42,7 +43,7 @@ input::placeholder{
 }
 
 .main{
-    width: 60%;
+    width: 50%;
 }
 
 .main h4, .main h6 {
@@ -55,19 +56,21 @@ input::placeholder{
     height: 100%;    
     display: grid;
     background: #373147;
-    grid-template-columns:6fr 1fr;
+    grid-template-columns:6fr 0.5fr;
     border-radius: 0.6rem;
     margin-bottom: 0.6rem;
+    padding: 0.6rem;
 }
 
 .header input{       
     border-radius: 0.6rem 0 0 0.6rem;
-    padding: 0.6rem;    
+        
 }
 
 .header button{
     border-radius: 0 0.6rem 0.6rem 0;
-    font-size: 2rem;   
+    font-size: 2rem;
+    transform: rotate(45deg);   
 }
 
 .header button:hover{
@@ -78,10 +81,8 @@ input::placeholder{
     position: relative;
     background: #373147;
     display: grid;     
-    grid-template-columns: 6fr 1fr 1fr;    
-    border-radius: 0.6rem;
-    padding: 0.6rem;
-    margin: 0.62rem 0;  
+    grid-template-columns: 6fr 0.5fr 0.5fr;    
+    border-radius: 0.6rem;          
 }
 
 .delTask:hover{    
@@ -92,7 +93,8 @@ input::placeholder{
     color: #201b2c;;          
 }
 
-#tasks li.checked{
+#tasks li.checked,
+#tasks li:hover {
     background: #2b2738;    
 }
 
@@ -102,8 +104,8 @@ input::placeholder{
     border-color: #00ff88;
     border-style: solid;
     border-width: 0 2px 2px 0;
-    top: 8px;
-    left: 15px;
+    top: 18px;
+    left: 18px;
     transform: rotate(45deg);
     height: 15px;
     width: 7px;
@@ -111,10 +113,25 @@ input::placeholder{
 }
 
 #convt{
-    margin-left: 2rem;
+    margin-left: 1.5rem;
+    padding: 1.2rem;
+    cursor: pointer;
 }
 
 #convt.checked{
     text-decoration: line-through;
 }
 
+.msgError{    
+    height: 3rem;    
+}
+
+.msg {
+    padding: 1rem;
+    background:#00ff88;
+    color:#201b2c;
+    height: 3rem;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 0.6rem;
+}

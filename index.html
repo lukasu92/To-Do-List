@@ -14,12 +14,16 @@
 
 <body>
     <div class="main"> 
-        <h4 class="logo">To Do List</h4>               
+        <h1 class="logo">To Do List</h1>               
         <div class="header">            
             <input type="text" id="newTask" placeholder="O que precisa ser feito?">
-            <button onclick="addNewTask()">＋</button>
-        </div>        
-        <h6>List</h6>
+            <button onclick="addNewTask()">🗙</button>
+        </div>
+        <div class="msgError">            
+            <span class="msg" id="msg1" style="display: none;" role="alert">⚠️ Necessário preencher o campo para adicionar/alterar a tarefa ⚠️</span>
+            <span class="msg" id="msg2" style="display: none;" role="alert">⚠️ Você está tentando editar uma tarefa finalizada ⚠️</span>                         
+        </div>              
+        <h2>List</h2>
         <ul id="tasks"></ul>
     </div>
 <script src="js/script.js"></script>
