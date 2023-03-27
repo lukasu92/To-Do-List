@@ -13,19 +13,33 @@
 </head>
 
 <body>
-    <div class="main"> 
-        <h1 class="logo">To Do List</h1>               
-        <div class="header">            
+    <div class="overlay" id="overlay" hidden>
+        <div class="confirm-box">
+            <div onclick="closeConfirmBox()" class="close"><p>🗙</p></div>
+            <h2>Confirmação</h2>
+            <p>Você deseja excluir a tarefa?</p>
+            <button onclick="isConfirm(true)">Sim</button>
+            <button onclick="closeConfirmBox()">Não</button>
+        </div>
+    </div>
+    <div class="main">
+        <h1 class="logo">To Do List</h1>
+        <div class="header">
             <input type="text" id="newTask" placeholder="O que precisa ser feito?">
             <button onclick="addNewTask()">🗙</button>
         </div>
-        <div class="msgError">            
-            <span class="msg" id="msg1" style="display: none;" role="alert">⚠️ Necessário preencher o campo para adicionar/alterar a tarefa ⚠️</span>
-            <span class="msg" id="msg2" style="display: none;" role="alert">⚠️ Você está tentando editar uma tarefa finalizada ⚠️</span>                         
-        </div>              
+        <div class="msgError">
+            <p class="msg" id="msg1" style="display: none;" role="alert">⚠️ Necessário preencher o campo para
+                adicionar/alterar uma tarefa. ⚠️</p>
+            <p class="msg" id="msg2" style="display: none;" role="alert">⚠️ Você está tentando editar uma tarefa
+                finalizada. ⚠️</p>
+        </div>
         <h2>List</h2>
         <ul id="tasks"></ul>
+        <p id="progress"><b>0/0</b></p>
     </div>
-<script src="js/script.js"></script>
+
+    <script defer src="js/script.js"></script>
 </body>
+
 </html>

@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Noto Sans', sans-serif;    
+    font-family: 'Noto Sans', sans-serif;
     list-style-type: none;
     width: 100vw;
     height: 100vh;
@@ -19,83 +19,86 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-} 
+}
 
-button{    
-    border:none;    
+button {
+    border: none;
     outline: none;
     font-size: 2rem;
-    background: none; 
-    color:#00ff88;
+    background: none;
+    color: #00ff88;
     cursor: pointer;
 }
 
-input{   
-    font-size: 1rem;    
+input {
+    font-size: 1rem;
     border: none;
     background: none;
-    color: #f0ffffde;    
+    color: #f0ffffde;
     outline: none;
 }
 
-input::placeholder{
+input::placeholder {
     color: #f0ffffde;
 }
 
-.main{
+.main {
     width: 50%;
 }
 
-.main h4, .main h6 {
+.main h4,
+.main h6 {
     border-bottom: 1px solid #00ff88;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.62rem;
 }
 
 .header {
     width: 100%;
-    height: 100%;    
+    height: 100%;
     display: grid;
     background: #373147;
-    grid-template-columns:6fr 0.5fr;
-    border-radius: 0.6rem;
-    margin-bottom: 0.6rem;
-    padding: 0.6rem;
+    grid-template-columns: 6fr 0.5fr;
+    border-radius: 0.62rem;
+    margin-bottom: 0.62rem;
+    padding: 0.62rem;
 }
 
-.header input{       
-    border-radius: 0.6rem 0 0 0.6rem;
-        
+.header input {
+    border-radius: 0.62rem 0 0 0.62rem;
+
 }
 
-.header button{
-    border-radius: 0 0.6rem 0.6rem 0;
+.header button {
+    border-radius: 0 0.62rem 0.62rem 0;
     font-size: 2rem;
-    transform: rotate(45deg);   
+    transform: rotate(45deg);
 }
 
-.header button:hover{
-    color: #201b2c;    
+.header button:hover {
+    color: #201b2c;
 }
 
-#tasks li {    
+#tasks li {
     position: relative;
     background: #373147;
-    display: grid;     
-    grid-template-columns: 6fr 0.5fr 0.5fr;    
-    border-radius: 0.6rem;          
+    display: grid;
+    grid-template-columns: 6fr 0.5fr 0.5fr;
+    border-radius: 0.62rem;
+    margin: 0.5rem 0;
 }
 
-.delTask:hover{    
-    border-radius: 0 0.6rem 0.6rem 0;       
+.delTask:hover {
+    border-radius: 0 0.62rem 0.62rem 0;
 }
 
-#tasks li button:hover{
-    color: #201b2c;;          
+#tasks li button:hover {
+    color: #201b2c;
+    ;
 }
 
 #tasks li.checked,
 #tasks li:hover {
-    background: #2b2738;    
+    background: #2b2738;
 }
 
 #tasks li.checked::before {
@@ -109,29 +112,86 @@ input::placeholder{
     transform: rotate(45deg);
     height: 15px;
     width: 7px;
-    
+
 }
 
-#convt{
+#convt {
     margin-left: 1.5rem;
     padding: 1.2rem;
     cursor: pointer;
 }
 
-#convt.checked{
+#convt.checked {
     text-decoration: line-through;
 }
 
-.msgError{    
-    height: 3rem;    
+.msgError {
+    height: 3rem;
 }
 
 .msg {
     padding: 1rem;
-    background:#00ff88;
-    color:#201b2c;
+    background: #00ff88;
+    color: #201b2c;
     height: 3rem;
     text-align: center;
     font-weight: bold;
-    border-radius: 0.6rem;
+    border-radius: 0.62rem;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+.confirm-box {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    width: 25%;
+    height: 25%;
+    font-size: 1.5rem;
+    text-align: center;
+    background: #00ff88;
+    border-radius: 0.62rem;
+    color: #201b2c;
+}
+
+.close {
+    cursor: pointer;
+    color: #201b2c;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close p {
+    margin: 0.3rem;
+    width: 40px;
+    height: 40px;
+
+}
+
+.close p:hover {
+    background: #393546;
+    color: #00ff88;
+    border-radius: 0.4rem;
+}
+
+
+.confirm-box button {
+    font-weight: bold;
+    font-size: 1.6rem;
+    background: #201b2c;
+    border-radius: 0.62rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.confirm-box button:hover {
+    background: #373147;
 }
