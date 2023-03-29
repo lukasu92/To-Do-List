@@ -1,3 +1,5 @@
+
+
 function addNewTask() {
     let li = document.createElement("li");
     let newTask = document.getElementById("newTask").value;
@@ -99,5 +101,16 @@ function counter() {
     let prog = document.getElementById("progress");
 
     prog.innerHTML = check.length + "/" + tasks.length;
-    console.log(check);
 }
+
+
+window.onbeforeunload = function () {
+    sessionStorage.setItem("todoItens", document.getElementById("tasks").innerHTML);    
+}
+
+window.onload = function () {
+    document.getElementById("tasks").innerHTML =  sessionStorage.getItem("todoItens");
+}
+
+
+
